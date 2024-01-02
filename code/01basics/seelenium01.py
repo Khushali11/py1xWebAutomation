@@ -4,6 +4,7 @@
 
 from selenium import webdriver
 
+
 # send command to navigate to url
 browser= webdriver.Chrome()
 browser.get("https://app.vwo.com")
