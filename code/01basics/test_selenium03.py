@@ -6,7 +6,7 @@ import logging
 
 
 def test_open_login():
-    chrome_options = webdriver.ChromeOptions()
+    chrome_options = webdriver   .ChromeOptions()
     # adblocker chrome extension plugin  in chrome is manually
     # to do automatically download crx file from crx extractor
     # give path here
