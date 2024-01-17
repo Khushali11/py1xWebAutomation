@@ -10,10 +10,10 @@ import pytest
 def test_open_login():
     driver = webdriver.Chrome()
     driver.get("https://app.vwo.com/#/login")
-    #driver.implicitly_wait(10)
-    #idea implicitly wait comes from waitr
-    #all element wait, waste of time
-    #all element wait, waste of time
+    # driver.implicitly_wait(10)
+    # idea implicitly wait comes from waitr
+    # all element wait, waste of time
+    # all element wait, waste of time
     # relative xpath
     rel_xpath_email = driver.find_element(By.XPATH, "//input[@id='login-username']")
     rel_xpath_email.send_keys("contact+atb5x@thetestingacademy.com")

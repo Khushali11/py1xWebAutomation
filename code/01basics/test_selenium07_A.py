@@ -30,6 +30,7 @@ def test_open_login():
     rel_xpath_signinbtn.click()
     #at time one condition explicity wait
     #WebDriverWait(driver, 35).until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".page-heading"), "Dashboard"))
+    WebDriverWait(driver, 35).until(EC.visibility_of_element_located ((By.CSS_SELECTOR, ".page-heading")))
     # wait python interpreter ,not webdriver
     # assert driver.current_url == "https://app.vwo.com/#/dashboard", 'Wrong URL'
     # page_heading_element = driver.find_element(*(By.XPATH, "//h1[@class='page-heading']"))
@@ -38,9 +39,9 @@ def test_open_login():
     assert page_heading_element_msg.text == os.getenv("NAME")
     #---------------------------------------------------------------------------------------------------------
     #fluent wait----condition+frequency----customize exception
-    ignore_list=[ElementNotSelectableException,ElementNotVisibleException]
-    wait=WebDriverWait(driver,15,poll_frequency=1,ignored_exceptions=ignore_list)
-    element=EC.presence_of_element_located((By.CSS_SELECTOR,".page-heading"))
+    #ignore_list=[ElementNotSelectableException,ElementNotVisibleException]
+    #wait=WebDriverWait(driver,15,poll_frequency=1,ignored_exceptions=ignore_list)
+   # element=EC.presence_of_element_located((By.CSS_SELECTOR,".page-heading"))
 
 
     #time.sleep(5)
